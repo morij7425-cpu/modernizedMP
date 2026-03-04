@@ -14,25 +14,25 @@
  * Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include <mousepad/mousepad-private.h>
-#include <mousepad/mousepad-application.h>
+#include <mousepad/mousepad-private.h> // Internal private headers
+#include <mousepad/mousepad-application.h> // Main application class
 #ifdef HAVE_DBUS
-#include <mousepad/mousepad-dbus.h>
+#include <mousepad/mousepad-dbus.h> // D-Bus integration (optional)
 #endif
 
 #ifdef HAVE_LIBINTL_H
 #include <libintl.h>
 #endif
 
-#include <xfconf/xfconf.h>
+#include <xfconf/xfconf.h> // Xfce configuration system
 
 
 /* globals */
-static gchar    **filenames = NULL;
-static gboolean   opt_version = FALSE;
+static gchar    **filenames = NULL; // Array of filenames from command line
+static gboolean   opt_version = FALSE; // Version display flag
 #ifdef HAVE_DBUS
-static gboolean   opt_disable_server = FALSE;
-static gboolean   opt_quit = FALSE;
+static gboolean   opt_disable_server = FALSE; // Disable D-Bus server
+static gboolean   opt_quit = FALSE; // Quit running instance
 #endif
 
 
